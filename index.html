@@ -962,7 +962,7 @@
     .b2c-features li.no::before { content: '✗'; color: rgba(255,255,255,0.35); }
     .b2c-features li.no span { text-decoration: line-through; color: rgba(179,176,205,0.55); }
 
-    .testimonials { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+    .testimonials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
     /* Timeline Accordion B2B */
     .timeline {
@@ -1058,10 +1058,24 @@
       padding: 2rem;
       backdrop-filter: blur(8px);
       transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      position: relative;
     }
     .testimonial-card:hover { border-color: rgba(236,81,220,0.3); }
-    .testimonial-card p { color: var(--text-muted); font-style: italic; margin-bottom: 1rem; font-size: 0.95rem; }
-    .testimonial-card .author { font-weight: 700; color: var(--accent-pink); }
+    .testimonial-card .quote-icon { color: var(--accent-pink); font-size: 3rem; line-height: 1; opacity: 0.65; font-family: Georgia, serif; }
+    .testimonial-avatar {
+      width: 128px; height: 128px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 3px solid var(--accent-pink);
+    }
+    .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .testimonial-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin: 0; }
+    .testimonial-card .author { font-weight: 800; color: var(--text-main); margin-top: auto; }
+    .testimonial-card .author .role { display: block; font-weight: 600; font-size: 0.8rem; color: var(--accent-pink); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.15rem; }
 
     .cta-section {
       text-align: center;
@@ -1337,6 +1351,7 @@
       .hero-panel-actions .btn-outline { margin-top: 0; display: flex; }
       .cta-section h2 { font-size: 2rem; }
       .deliverables-grid { grid-template-columns: 1fr; }
+      .testimonials { grid-template-columns: 1fr; }
       .marquee-head { flex-direction: column; align-items: stretch; gap: 1rem; }
       .marquee-controls { padding-top: 0; justify-content: flex-end; margin-bottom: 0.5rem; }
       .marquee-btn { width: 38px; height: 38px; }
@@ -1702,12 +1717,21 @@
 
   <!-- ===== TESTIMONIOS ===== -->
   <section>
-    <h3 class="section-title pink">Lo que dicen</h3>
-    <p class="section-subtitle">Mujeres que ya vivieron la experiencia.</p>
+    <h3 class="section-title pink">Lo que dicen quienes ya hicieron la mentoría</h3>
+    <p class="section-subtitle">Resultados reales de jóvenes profesionales que transformaron su búsqueda laboral.</p>
     <div class="testimonials">
-      <div class="testimonial-card"><p>"Dani me ayudó a encontrar claridad en un momento de mucha incertidumbre laboral. Su acompañamiento fue clave para conseguir mi primer empleo."</p><div class="author">— Valentina</div></div>
-      <div class="testimonial-card"><p>"Nunca imaginé que preparar un CV podía ser tan estratégico. Las sesiones de práctica de entrevistas me dieron la confianza que necesitaba."</p><div class="author">— Camila</div></div>
-      <div class="testimonial-card"><p>"El programa superó mis expectativas. No solo conseguí trabajo, sino que aprendí a valorar mis habilidades y a negociar lo que merezco."</p><div class="author">— Sofía</div></div>
+      <div class="testimonial-card">
+        <div class="quote-icon">“</div>
+        <div class="testimonial-avatar"><img src="Flor.png" alt="Flor" loading="lazy"></div>
+        <p>"Recuerdo una frase que me dijo Dani que me marcó para siempre: 'Si sos buena en las cosas que no te gustan, imaginate haciendo las cosas que sí te gustan'."</p>
+        <div class="author">Flor</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-icon">“</div>
+        <div class="testimonial-avatar"><img src="Barbie.png" alt="Barbie" loading="lazy"></div>
+        <p>"Venía muy desmotivada con la búsqueda laboral, llevaba más de 6 meses buscando trabajo. Dani me mostró que estaba para más. Me ayudó a ordenarme, desafiarme y no ir a lo seguro; a las dos semanas me llamaron para 5 entrevistas."</p>
+        <div class="author">Barbie</div>
+      </div>
     </div>
   </section>
 
