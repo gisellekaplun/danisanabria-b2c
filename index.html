@@ -1339,7 +1339,8 @@
       .section-title { font-size: 1.8rem; }
       .about-cards { grid-template-columns: 1fr; }
       .puzzle-grid { grid-template-columns: 1fr 1fr; --pz-knob: 22px; --pz-socket: 28px; gap: 18px; overflow: visible; }
-      .puzzle-piece { padding: 1rem 0.9rem; overflow: visible; }
+      .puzzle-piece { padding: 1rem 0.9rem; overflow: visible; min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+      .puzzle-piece .icon { margin-bottom: 0.6rem; }
       .puzzle-piece:active { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45); }
       .puzzle-piece::after { opacity: 1; }
       .puzzle-piece h4 { font-size: 0.95rem; }
