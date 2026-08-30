@@ -1188,6 +1188,30 @@
     .faq-section .btn-outline:hover { background: rgba(201, 160, 241, 0.1); }
     .manifesto-btn-sm { font-size: 0.75rem; padding: 0.5rem 1rem; }
 
+    #faq-home {
+      position: relative;
+      max-width: none;
+      padding: 4.5rem 2rem;
+      text-align: center;
+    }
+    #faq-home::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(11,8,19,0.4) 0%, rgba(11,8,19,0.85) 100%),
+        url('faqs-fondo-home.webp');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.95;
+      z-index: 0;
+    }
+    #faq-home .section-title,
+    #faq-home .section-subtitle { position: relative; z-index: 1; max-width: 800px; margin-left: auto; margin-right: auto; }
+    #faq-home .faq-list,
+    #faq-home .faq-cta { position: relative; z-index: 1; max-width: 800px; margin-left: auto; margin-right: auto; }
+    #faq-home .faq-question { text-align: left; }
+
     footer {
       border-top: 1px solid var(--glass-border);
       padding: 3rem 2rem;
@@ -1418,7 +1442,7 @@
       <div class="services-head">
         <h2 class="services-title">Mentoría Laboral Individual <span class="services-title-line">Tu Propio Camino</span></h2>
         <div class="services-divider" aria-hidden="true"></div>
-        <p class="services-subtitle">Un espacio estratégico para posicionarte como necesitás en el mercado de trabajo.</p>
+        <p class="services-subtitle">Un espacio para planificar a consciencia y posicionarte como necesitás en el mercado de trabajo.</p>
       </div>
 
       <div class="service-row service-row-reverse">
@@ -1428,7 +1452,7 @@
         </div>
         <div class="service-content">
           <h3>Un acompañamiento intensivo y 100% personalizado.</h3>
-          <p>Tu trayectoria puede tener el equilibrio que buscás con la vida que querés llevar.</p>
+          <p>Tu trayectoria puede tener el <strong>equilibrio</strong> que buscás con la vida que querés llevar.</p>
           <p>Pensado para jóvenes profesionales que quieren dar su primer gran salto o redefinir su rumbo, con guía a medida.</p>
           <div class="service-actions">
             <a href="#que-es" class="btn btn-outline service-btn-b2c-outline" onclick="irPropuesta('b2c'); return false;">Impulsar mi carrera</a>
@@ -1443,7 +1467,7 @@
         </div>
         <div class="manifesto-text" style="text-align: center; max-width: 600px;">
           <p>El mercado laboral cambió. La forma de posicionar tu talento, también.</p>
-          <p>Mi trabajo es darte herramientas estratégicas para que las oportunidades te encuentren a vos: desde pulir y descubrir tus habilidades y optimizar tu presencia profesional, hasta dominar las instancias de selección.</p>
+          <p>Mi trabajo es darte las herramientas necesarias para que las oportunidades te encuentren a vos: desde pulir y descubrir tus habilidades y optimizar tu presencia profesional, hasta dominar las instancias de selección.</p>
           <p>El objetivo es claro, acceder a un trabajo que se adapte a tu vida y a tus metas, no al revés.</p>
         </div>
       </div>
@@ -1778,7 +1802,7 @@
       </li>
     </ul>
     <div class="faq-cta">
-      <a href="/preguntas-frecuentes" class="btn btn-outline faq-btn-sm">Ver todas las preguntas frecuentes →</a>
+      <a href="preguntas-frecuentes.html" class="btn btn-outline faq-btn-sm">Ver todas las preguntas frecuentes →</a>
     </div>
   </section>
 
@@ -1967,6 +1991,24 @@
       });
 
       raf = requestAnimationFrame(loop);
+    })();
+
+    /* ===== DEEP LINK: rutear hash al cargar (desde FAQs u otros enlaces) ===== */
+    (function () {
+      function routeHash() {
+        var h = window.location.hash;
+        if (!h || h === '#inicio') { irInicio(); return; }
+        if (h === '#sobre-mi') { irSobreMi(); return; }
+        if (h === '#contacto-form') { irContacto(); return; }
+        var seccion = h.replace('#', '');
+        var el = document.getElementById(seccion);
+        if (el) irPropuestaSeccion('b2c', seccion);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', routeHash);
+      } else {
+        routeHash();
+      }
     })();
   </script>
 </body>
