@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preguntas Frecuentes — Dani Sanabria</title>
-  <meta name="description" content="Resolvemos las consultas más comunes sobre mentoría laboral, consultoría organizacional y el enfoque de Inbound Talent.">
+  <meta name="description" content="Resolvemos las consultas más comunes sobre la mentoría laboral y la búsqueda de empleo.">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --neon-lime: #ec51dc;
-      --neon-pink: #c6f074;
+      --accent-pink: #ec51dc;
+      --accent-green: #c6f074;
       --cosmic-bg: #0B0813;
       --cosmic-card: #18112B;
       --cosmic-card-hover: #1f1a30;
@@ -42,7 +42,7 @@
       z-index: 100;
       border-bottom: 1px solid var(--glass-border);
     }
-    .logo { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.04rem; color: var(--neon-lime); flex-shrink: 0; }
+    .logo { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.04rem; color: var(--accent-pink); flex-shrink: 0; }
     .logo span { color: var(--text-main); }
     .logo .logo-sub { font-style: normal; font-size: 0.72rem; font-weight: 600; color: var(--text-muted); }
     .nav-center { display: flex; align-items: center; }
@@ -52,7 +52,7 @@
     }
     .nav-links a { transition: color 0.3s; color: var(--text-muted); padding: 0.24rem 0.48rem; font-weight: 600; }
     .nav-links a:hover { color: var(--text-main); }
-    .nav-links a.active-link { color: var(--neon-lime); }
+    .nav-links a.active-link { color: var(--accent-pink); }
     .hidden { display: none !important; }
 
     /* ===== MEGA MENU ===== */
@@ -92,13 +92,9 @@
     .mega-mini strong .arrow { margin-left: auto; opacity: 0; transform: translateX(-4px); transition: opacity 0.25s ease, transform 0.25s ease; color: #c9a0f1; }
     .mega-mini:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(201, 160, 241, 0.45); transform: translateY(-2px); }
     .mega-mini:hover strong .arrow { opacity: 1; transform: translateX(0); }
-    .mega-empresa .mega-mini strong .arrow { color: #c6f074; }
-    .mega-empresa .mega-mini:hover { border-color: rgba(198, 240, 116, 0.45); }
     .mega-talento { border-top: 3px solid #c9a0f1; }
-    .mega-empresa { border-top: 3px solid #c6f074; }
     .nav-talento { color: #c9a0f1 !important; }
-    .nav-empresa { color: #c6f074 !important; }
-    .nav-talento:hover, .nav-empresa:hover { color: var(--text-main) !important; }
+    .nav-talento:hover { color: var(--text-main) !important; }
 
     .menu-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.2rem; cursor: pointer; }
 
@@ -109,41 +105,6 @@
     }
     .faq-page-header h1 { font-size: 2rem; margin-bottom: 0.4rem; }
     .faq-page-header p { color: var(--text-muted); margin-bottom: 2rem; }
-
-    /* ===== SECTION TAGS (from main site) ===== */
-    .section-tag {
-      display: inline-block;
-      padding: 0.3rem 0.9rem;
-      border-radius: 100px;
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    .section-tag.purple {
-      background: rgba(201, 160, 241, 0.12);
-      color: #c9a0f1;
-      border: 1px solid rgba(201, 160, 241, 0.28);
-    }
-    .section-tag.pink {
-      background: rgba(236, 81, 220, 0.12);
-      color: #ec51dc;
-      border: 1px solid rgba(236, 81, 220, 0.28);
-    }
-
-    /* ===== FAQ FILTERS ===== */
-    .faq-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem; }
-    .faq-filter-btn {
-      background: none; border: 1px solid var(--glass-border);
-      color: var(--text-muted); padding: 0.4rem 1rem; border-radius: 999px;
-      font-size: 0.8rem; font-weight: 600; cursor: pointer;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      transition: all 0.25s;
-    }
-    .faq-filter-btn:hover, .faq-filter-btn.active {
-      background: var(--neon-lime); color: #fff; border-color: var(--neon-lime);
-    }
 
     /* ===== FAQ LIST ===== */
     .faq-page-body { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
@@ -157,7 +118,7 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       transition: color 0.2s;
     }
-    .faq-question:hover { color: var(--neon-lime); }
+    .faq-question:hover { color: var(--accent-pink); }
     .faq-icon {
       font-size: 1.3rem; font-weight: 300; color: var(--text-muted);
       transition: transform 0.3s ease; flex-shrink: 0; margin-left: 1rem;
@@ -170,7 +131,6 @@
       color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;
     }
     .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.1rem; }
-    .faq-item[data-cat].hidden-faq { display: none; }
 
     /* ===== BACK LINK ===== */
     .back-home {
@@ -178,7 +138,7 @@
       color: var(--text-muted); font-size: 0.85rem; font-weight: 600;
       margin-bottom: 1.5rem; transition: color 0.2s;
     }
-    .back-home:hover { color: var(--neon-lime); }
+    .back-home:hover { color: var(--accent-pink); }
 
     /* ===== FOOTER ===== */
     footer {
@@ -188,7 +148,7 @@
     }
     footer .social { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; }
     footer .social a { color: var(--text-muted); transition: color 0.3s; display: inline-flex; align-items: center; }
-    footer .social a:hover { color: var(--neon-lime); }
+    footer .social a:hover { color: var(--accent-pink); }
     footer .social svg { width: 24px; height: 24px; fill: currentColor; }
 
     /* ===== RESPONSIVE ===== */
@@ -222,8 +182,6 @@
       .mega-panel .mega-link { padding: 0.5rem 0.75rem; margin: 0 -0.75rem; }
       .mega-panel .mega-col h4 { margin-bottom: 0.3rem; }
       .faq-page-header h1 { font-size: 1.6rem; }
-      .faq-filters { gap: 0.4rem; }
-      .faq-filter-btn { font-size: 0.72rem; padding: 0.35rem 0.8rem; }
     }
   </style>
 </head>
@@ -270,72 +228,91 @@
 
   <div class="faq-page-header">
     <a href="index.html" class="back-home">← Volver al inicio</a>
-    <span class="section-tag purple">PREGUNTAS FRECUENTES</span>
     <h1>¿Tenés dudas?</h1>
-    <p>Resolvemos las consultas más comunes sobre nuestro enfoque y servicios.</p>
-
-    <div class="faq-filters">
-      <button class="faq-filter-btn active" data-filter="all">Todas (6)</button>
-      <button class="faq-filter-btn" data-filter="b2c">Para Talentos (4)</button>
-      <button class="faq-filter-btn" data-filter="general">Generales (2)</button>
-    </div>
+    <p>Resolvemos las consultas más comunes sobre la mentoría y la búsqueda laboral.</p>
   </div>
 
   <div class="faq-page-body">
     <ul class="faq-list">
 
-      <!-- GENERAL -->
-      <li class="faq-item" data-cat="general">
+      <li class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Qué es el enfoque de "Inbound Talent" y en qué se diferencia del reclutamiento tradicional?</span>
+          <span>¿Cómo me ayuda la mentoría si no tengo experiencia laboral previa?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>El reclutamiento tradicional (Outbound) sale a cazar candidatos de forma reactiva cuando se abre una vacante, generando altos costos y rotación. El Inbound Talent transforma la cultura de la empresa y el perfil del profesional en polos magnéticos: atrae y retiene talento de forma orgánica por alineación de propósito y valores.</p></div>
+        <div class="faq-answer"><p>Trabajamos juntas en crear un CV que destaque tus conocimientos, cursos o carreras que estés estudiando y tus soft skills (cualidades personales, sociales y emocionales) más valoradas por el mercado.</p></div>
       </li>
 
-      <!-- B2C -->
-      <li class="faq-item" data-cat="b2c">
+      <li class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿En qué se diferencia la mentoría profesional de un armado de CV tradicional?</span>
+          <span>¿Puedo conseguir un trabajo remoto o híbrido desde mi primer empleo?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>No es un ajuste cosmético de un documento. Es un proceso estratégico de posicionamiento laboral donde identificás tu propuesta de valor, aprendés a atraer ofertas alineadas con tu estilo de vida y te preparás para encarar entrevistas con seguridad sin resignar tu bienestar.</p></div>
+        <div class="faq-answer"><p>Sí, es 100% posible. Vamos a buscar empresas que matcheen con vos y ese será nuestro objetivo.</p></div>
       </li>
 
-      <!-- B2C -->
-      <li class="faq-item" data-cat="b2c">
+      <li class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿A quién está dirigida exactamente la mentoría de desarrollo de carrera?</span>
+          <span>¿En qué se diferencia esta mentoría de contratar a alguien que arregle mi CV?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>A estudiantes avanzados, recién graduados y jóvenes profesionales que buscan dar su primer gran salto laboral o reorientar su carrera hacia entornos que respeten su bienestar, sin tener que resignar pretensiones salariales ni desarrollo continuo.</p></div>
+        <div class="faq-answer"><p>Es un trabajo en equipo súper personalizado. Además, en los meet 1:1 analizamos otros intereses que puedas tener y, si es necesario, crear más de un CV.</p></div>
       </li>
 
-      <!-- B2C -->
-      <li class="faq-item" data-cat="b2c">
+      <li class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Cómo me ayuda el programa a conseguir trabajo sin descuidar mi equilibrio personal?</span>
+          <span>¿Cómo sé cuál debería ser mi pretensión salarial?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>Te enseñamos a identificar empresas cuyas culturas ya promuevan el trabajo flexible y la evaluación por resultados. Te posicionamos como un perfil magnético en el mercado para que no tengas que aceptar ofertas que choquen con tu calidad de vida.</p></div>
+        <div class="faq-answer"><p>Te informo sobre los sueldos que maneja el mercado según el puesto al que apuntas. Te doy las herramientas para que defiendas tu sueldo sin miedo en las entrevistas.</p></div>
       </li>
 
-      <!-- B2C -->
-      <li class="faq-item" data-cat="b2c">
+      <li class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Qué incluye el acompañamiento durante la búsqueda activa y entrevistas?</span>
+          <span>¿Qué hago si mando cientos de postulaciones y me hacen "ghosting"?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>Incluye optimización estratégica de perfil de LinkedIn, simulacros de entrevistas por competencias, definición de banda salarial pretenciosa y tácticas de negociación de propuestas laborales.</p></div>
+        <div class="faq-answer"><p>Postularte a lo que venga ya no funciona. Cambiamos la estrategia de postular masivamente a posicionarte en lo que realmente quieras y te entusiasme.</p></div>
       </li>
 
-      <!-- GENERAL -->
-      <li class="faq-item" data-cat="general">
+      <li class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Cómo funciona el proceso de mentoría?</span>
+          <span>¿Es necesario tener un perfil activo en LinkedIn si recién estoy empezando?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer"><p>Comenzamos con una charla de 30 minutos sin costo para conocer tu situación. Luego avanzamos por fases: diagnóstico personal (FODA), estrategia de posicionamiento (CV, LinkedIn) y práctica de entrevistas con feedback.</p></div>
+        <div class="faq-answer"><p>Sí, es indispensable. Más del 80% de las búsquedas de talento joven ocurren en LinkedIn. Optimizamos tu perfil con palabras clave, titular estratégico y red de contactos para que los reclutadores te encuentren fácilmente.</p></div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>¿Cómo me preparo para una entrevista si me dan mucha ansiedad las preguntas?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Hacemos simulacros de entrevista vía Meet. Te enseño técnicas para bajar la ansiedad y preparamos respuestas y actitud para que llegues de la mejor manera.</p></div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>¿Puedo hacer la mentoría sin descuidar la facultad o mi vida personal?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Totalmente. Los encuentros son 100% remotos y me adapto a tus horarios académicos y/o laborales. El objetivo del programa es que consigas un trabajo que respete tu bienestar y tu vida profesional, no que los interrumpa.</p></div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>¿Cuánto dura el acompañamiento individual?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Trabajamos en módulos intensivos diseñados para ver resultados de inmediato. Incluye sesiones 1 a 1 en vivo, revisión de material entre encuentros y soporte directo para resolver dudas urgentes sobre tus postulaciones.</p></div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>¿Cómo sé si esta mentoría es para mí?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Si sos estudiante, querés dar tus primeros pasos en el ámbito laboral o te encontrás en un trabajo que sentís que no es para vos. Este programa va a sacar tu mejor versión para llegar a donde realmente querés.</p></div>
       </li>
 
     </ul>
@@ -352,22 +329,6 @@
   </footer>
 
   <script>
-    /* FAQ Filters */
-    document.querySelectorAll('.faq-filter-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        document.querySelectorAll('.faq-filter-btn').forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        var filter = btn.getAttribute('data-filter');
-        document.querySelectorAll('.faq-item').forEach(function (item) {
-          if (filter === 'all' || item.getAttribute('data-cat') === filter) {
-            item.classList.remove('hidden-faq');
-          } else {
-            item.classList.add('hidden-faq');
-          }
-        });
-      });
-    });
-
     /* Mobile menu toggle for mega panels */
     document.querySelectorAll('.nav-item.has-mega .nav-trigger').forEach(function (trigger) {
       trigger.addEventListener('click', function (e) {
