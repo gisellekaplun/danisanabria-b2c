@@ -1769,6 +1769,9 @@
       <label for="form-email">Email
         <input type="email" id="form-email" name="email" placeholder="tu@email.com" required>
       </label>
+      <label for="form-telefono">Teléfono / WhatsApp
+        <input type="tel" id="form-telefono" name="telefono" placeholder="Tu teléfono">
+      </label>
     <label for="form-segmento">¿Qué te interesa?
       <select id="form-segmento" name="segmento">
         <option value="b2c">Mentoría de carrera individual</option>
@@ -1856,9 +1859,48 @@
       e.preventDefault();
       const msg = this.querySelector('#form-mensaje').value;
       const nombre = this.querySelector('#form-nombre').value;
+      const email = this.querySelector('#form-email').value;
+      const telefono = this.querySelector('#form-telefono').value;
       const segmento = this.querySelector('#form-segmento').value;
-      const texto = 'Hola Dani, soy ' + nombre + '. Consulta (' + segmento + '): ' + msg;
-      window.open('https://api.whatsapp.com/send?phone=5491150268149&text=' + encodeURIComponent(texto), '_blank');
+
+      const btn = this.querySelector('.btn');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      fetch('https://formspree.io/f/xppzkrzr', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          nombre: nombre,
+          email: email,
+          telefono: telefono,
+          segmento: segmento,
+          mensaje: msg
+        })
+      })
+        .then(function (res) {
+          btn.textContent = '¡Consulta enviada!';
+          btn.style.background = '#25D366';
+          const texto = 'Hola Dani, soy ' + nombre + '. Consulta (' + segmento + '): ' + msg;
+          window.open('https://api.whatsapp.com/send?phone=5491150268149&text=' + encodeURIComponent(texto), '_blank');
+          setTimeout(function () {
+            btn.textContent = 'Enviar consulta';
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        })
+        .catch(function () {
+          btn.textContent = 'Hubo un error, intentalo de nuevo';
+          btn.style.background = '#E1524D';
+          setTimeout(function () {
+            btn.textContent = 'Enviar consulta';
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        });
       this.reset();
     });
 
