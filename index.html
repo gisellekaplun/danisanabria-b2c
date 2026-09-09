@@ -1884,8 +1884,6 @@
         .then(function (res) {
           btn.textContent = '¡Consulta enviada!';
           btn.style.background = '#25D366';
-          const texto = 'Hola Dani, soy ' + nombre + '. Consulta (' + segmento + '): ' + msg;
-          window.open('https://api.whatsapp.com/send?phone=5491150268149&text=' + encodeURIComponent(texto), '_blank');
           setTimeout(function () {
             btn.textContent = 'Enviar consulta';
             btn.style.background = '';
