@@ -1,1 +1,240 @@
-navegar-el-futuro-profesional-en-la-era-de-la-ia.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegar el Futuro Profesional en la Era de la IA | Dani Sanabria</title>
+    <meta name="description" content="Chau al camino perfecto: cómo construir tu carrera en la era de la IA sin desistir en el intento. 3 reglas para tomar decisiones estratégicas en tu primer empleo y futuro laboral.">
+    <meta property="og:title" content="Navegar el Futuro Profesional en la Era de la IA | Dani Sanabria">
+    <meta property="og:description" content="Cómo construir tu carrera en la era de la IA: preparación antes que predicción, invertí en lo que perdura y tomate tiempo para el juicio. Por Dani Sanabria.">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cosmic-bg: #17161a;
+            --cosmic-card: #232226;
+            --cosmic-card-hover: #2d2c30;
+            --accent-pink: #c9a0f1;
+            --accent-green: #e6338a;
+            --text-main: #fafafa;
+            --text-muted: #a0a0a8;
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #17161a 0%, #1a1920 40%, #1f1d26 70%, #17161a 100%);
+            background-attachment: fixed;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3, h4 { font-family: 'Geomini', sans-serif; color: var(--text-main); line-height: 1.4; }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(23, 22, 26, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.3rem; color: var(--accent-pink); }
+        .logo span { color: var(--text-main); }
+        .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.6rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-links a.active { color: var(--accent-green); }
+
+        /* ARTICULO */
+        .post {
+            padding: 130px 24px 80px;
+        }
+        .post-back {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 32px;
+            transition: color 0.3s;
+        }
+        .post-back:hover { color: var(--accent-pink); }
+        .post-cat {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--accent-pink);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .post h1 {
+            font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+            margin-bottom: 16px;
+        }
+        .post-meta { font-size: 0.82rem; color: var(--text-muted); opacity: 0.8; margin-bottom: 40px; }
+
+        .post p { margin-bottom: 22px; font-size: 1.02rem; }
+
+        .post h2 {
+            font-size: 1.6rem;
+            margin: 44px 0 14px;
+        }
+        .post h2::before {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-pink));
+            margin-bottom: 18px;
+        }
+
+        .post h3 {
+            font-size: 1.2rem;
+            margin: 28px 0 10px;
+            color: var(--accent-pink);
+        }
+        .post ul, .post ol { margin: 0 0 22px 24px; }
+        .post li { margin-bottom: 8px; }
+        .post li strong { color: var(--text-main); }
+
+        .post .divider {
+            border: 0;
+            height: 1px;
+            background: var(--glass-border);
+            margin: 40px 0;
+        }
+
+        /* CTA FINAL */
+        .post-cta {
+            background: var(--cosmic-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-top: 48px;
+            text-align: center;
+        }
+        .post-cta h3 { font-size: 1.35rem; margin-bottom: 10px; color: var(--accent-green); }
+        .post-cta p { font-size: 0.98rem; margin-bottom: 20px; }
+        .post-cta .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-green));
+            color: #0B0813;
+            font-weight: 800;
+            padding: 12px 30px;
+            border-radius: 999px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .post-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(236, 81, 220, 0.35);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">Dani <span>Sanabria</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#como-funciona">Servicios</a></li>
+                <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../preguntas-frecuentes.html">FAQs</a></li>
+                <li><a href="../index.html#contacto-form">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ARTICULO -->
+    <article class="post">
+        <div class="container">
+            <a href="../blog.html" class="post-back">← Volver al blog</a>
+            <span class="post-cat">Carrera · IA</span>
+            <h1>Navegar el Futuro Profesional en la Era de la IA</h1>
+            <p class="post-meta">Dani Sanabria · 2026</p>
+
+            <h2>Chau al &quot;camino perfecto&quot;: cómo construir tu carrera en la era de la IA sin desistir en el intento</h2>
+
+            <p>Si sentís pánico cada vez que alguien te pregunta dónde te ves de acá a 10 años, quiero decirte algo muy importante: no estás solo y no hay nada malo en vos.</p>
+            <p>Crecimos escuchando que el éxito laboral consistía en seguir un guion rígido: estudiar, entrar a una empresa y escalar posición por posición de manera lineal. Sin embargo, la realidad de hoy es completamente distinta; ese calendario predecible desapareció y nos enfrentamos a un escenario donde la inteligencia artificial avanza a pasos agigantados y nuestras vidas laborales se van a extender por 50 o 60 años.</p>
+            <p>Esta falta de mapas claros sobre tu primer empleo y futuro laboral genera una ansiedad enorme, y es totalmente comprensible. Es frustrante sentir que estás buscando un &quot;puesto perfecto&quot; en un mercado donde las reglas cambian todo el tiempo. Pero acá está la buena noticia que quiero compartirte como tu mentora: el secreto no es adivinar el futuro, sino aprender a tomar decisiones estratégicas hoy para adaptarte con flexibilidad a cualquier escenario que venga.</p>
+
+            <hr class="divider">
+
+            <h2>Las 3 Nuevas Reglas para tu Carrera</h2>
+
+            <h3>Regla 1: Preparación antes que predicción</h3>
+            <p>En lugar de paralizarte intentando descifrar cuál es el puesto &quot;ideal&quot; o la empresa perfecta, enfocate en aumentar tu capacidad de respuesta ante las oportunidades que surjan. La clave no está en hacer grandes planes a ciegas, sino en poner en marcha pequeños experimentos de bajo riesgo que amplíen tu abanico de posibilidades:</p>
+            <ul>
+                <li><strong>Experimentá con nuevas tecnologías:</strong> no esperes a que un trabajo te exija usar herramientas de IA; empezá a explorarlas e integrarlas por tu cuenta hoy mismo.</li>
+                <li><strong>Creá tus propios proyectos o colaboraciones:</strong> sumate a voluntariados, iniciativas freelance o proyectos personales que pongan a prueba tus habilidades y funcionen como prueba real de tu talento.</li>
+                <li><strong>Conectá fuera de tu entorno habitual:</strong> conversá con profesionales de distintas áreas para ganar perspectiva y ampliar tu red de contactos antes de necesitarla con urgencia.</li>
+            </ul>
+
+            <h3>Regla 2: Invertí en lo que perdura</h3>
+            <p>Cuando aceptás que vas a trabajar durante varias décadas, la urgencia por conseguir &quot;el próximo puesto como sea&quot; da paso a una visión mucho más valiosa y sustentable. Enfocate en construir activos cuyo valor no se devalúe con el paso del tiempo, sino que se multiplique:</p>
+            <ul>
+                <li><strong>Fomentá la curiosidad y el aprendizaje continuo:</strong> la capacidad de aprender cosas nuevas de forma autónoma es la habilidad definitiva que te va a permitir adaptarte a las transformaciones del trabajo.</li>
+                <li><strong>Construí relaciones de confianza genuinas:</strong> las conexiones sólidas y el networking sincero se fortalecen con el tiempo y abren puertas que ningún algoritmo puede cerrar.</li>
+                <li><strong>Cuidá tu salud física y mental:</strong> mantener tu bienestar es lo que preserva tus energías y opciones abiertas hacia el futuro.</li>
+            </ul>
+
+            <h3>Regla 3: Tómate tiempo para el juicio</h3>
+            <p>En un mundo laboral que ya no tiene un guion preestablecido, el verdadero superpoder consiste en saber ejercer el buen juicio al tomar decisiones. La prisa constante y la presión por responder a todo inmediatamente te convierten en una persona reactiva.</p>
+            <ul>
+                <li><strong>Creá espacios de calma y reflexión:</strong> hacer pausas deliberadas te permite distanciarte del caos, conectar ideas y tomar mejores decisiones profesionales en lugar de actuar por impulso.</li>
+                <li><strong>Aceptá la incertidumbre con criterio:</strong> quienes se reservan momentos para pensar logran navegar la falta de certeza con muchísima más claridad y firmeza.</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>¡Es hora de tomar el control!</h2>
+            <p>Es momento de soltar la presión de encontrar la &quot;carrera perfecta&quot; o la hoja de ruta definitiva. Tu desarrollo profesional no es una línea recta, sino un camino que vas a ir diseñando a tu medida con tus propios experimentos y decisiones.</p>
+            <p>Tenés todo el potencial para marcar la diferencia en tu primer empleo y futuro laboral.</p>
+            <p>Si querés que analicemos tu perfil, definamos tus próximos pequeños experimentos o diseñemos juntos tu plan estratégico, agendá tu sesión de mentoría 1:1 o enviame un mensaje por WhatsApp a través de la web.</p>
+            <p>¡Empecemos a construir tu camino hoy mismo! 🚀</p>
+
+            <div class="post-cta">
+                <h3>¿Lista para tomar el control de tu carrera?</h3>
+                <p>Agendá tu sesión de mentoría 1:1 y empecemos a construir tu camino hoy mismo.</p>
+                <a href="../index.html#contacto-form" class="btn">Agendar sesión →</a>
+            </div>
+
+            <hr class="divider">
+
+            <p style="font-size:0.82rem; opacity:0.7;"><strong>Fuentes consultadas:</strong><br>Harvard Business Review — &quot;Se acabó la predecible trayectoria profesional de los ejecutivos&quot;, por Lynda Gratton (2026).</p>
+        </div>
+    </article>
+
+    <footer>
+        &copy; 2026 Dani Sanabria | Mentoría laboral. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
