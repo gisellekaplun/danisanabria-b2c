@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo destacar en el mercado laboral sin volverte un robot | Dani Sanabria</title>
+    <meta name="description" content="La IA no vino a dejarte afuera: vino a despejarte el camino para que brilles en lo que un software jamás va a poder replicar. Conocé las 5 habilidades humanas que te hacen destacar.">
+    <meta property="og:title" content="Cómo destacar en el mercado laboral sin volverte un robot | Dani Sanabria">
+    <meta property="og:description" content="Empatía, creatividad, adaptabilidad, comunicación y mentoría: las 5 habilidades humanas que te diferencian de la inteligencia artificial. Por Dani Sanabria.">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cosmic-bg: #17161a;
+            --cosmic-card: #232226;
+            --cosmic-card-hover: #2d2c30;
+            --accent-pink: #c9a0f1;
+            --accent-green: #e6338a;
+            --text-main: #fafafa;
+            --text-muted: #a0a0a8;
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #17161a 0%, #1a1920 40%, #1f1d26 70%, #17161a 100%);
+            background-attachment: fixed;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3, h4 { font-family: 'Geomini', sans-serif; color: var(--text-main); line-height: 1.4; }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(23, 22, 26, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.3rem; color: var(--accent-pink); }
+        .logo span { color: var(--text-main); }
+        .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.6rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-links a.active { color: var(--accent-green); }
+
+        /* ARTICULO */
+        .post {
+            padding: 130px 24px 80px;
+        }
+        .post-back {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 32px;
+            transition: color 0.3s;
+        }
+        .post-back:hover { color: var(--accent-pink); }
+        .post-cat {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--accent-pink);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .post h1 {
+            font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+            margin-bottom: 16px;
+        }
+        .post-cover {
+            margin: 0 0 28px;
+        }
+        .post-cover img {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
+        }
+        .post-meta { font-size: 0.82rem; color: var(--text-muted); opacity: 0.8; margin-bottom: 40px; }
+
+        .post p { margin-bottom: 22px; font-size: 1.02rem; }
+
+        .post h2 {
+            font-size: 1.6rem;
+            margin: 44px 0 14px;
+        }
+        .post h2::before {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-pink));
+            margin-bottom: 18px;
+        }
+
+        .post h3 {
+            font-size: 1.2rem;
+            margin: 28px 0 10px;
+            color: var(--accent-pink);
+        }
+        .post ul, .post ol { margin: 0 0 22px 24px; }
+        .post li { margin-bottom: 8px; }
+        .post li strong { color: var(--text-main); }
+
+        .post .divider {
+            border: 0;
+            height: 1px;
+            background: var(--glass-border);
+            margin: 40px 0;
+        }
+
+        /* CTA FINAL */
+        .post-cta {
+            background: var(--cosmic-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-top: 48px;
+            text-align: center;
+        }
+        .post-cta h3 { font-size: 1.35rem; margin-bottom: 10px; color: var(--accent-green); }
+        .post-cta p { font-size: 0.98rem; margin-bottom: 20px; }
+        .post-cta .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-green));
+            color: #0B0813;
+            font-weight: 800;
+            padding: 12px 30px;
+            border-radius: 999px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .post-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(236, 81, 220, 0.35);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">Dani <span>Sanabria</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#como-funciona">Servicios</a></li>
+                <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../preguntas-frecuentes.html">FAQs</a></li>
+                <li><a href="../index.html#contacto-form">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ARTICULO -->
+    <article class="post">
+        <div class="container">
+            <a href="../blog.html" class="post-back">← Volver al blog</a>
+            <span class="post-cat">Carrera · Habilidades</span>
+            <figure class="post-cover">
+                <img src="business-executives-discussing-sticky-notes-web.jpg" alt="Equipo de trabajo debatiendo ideas con notas adhesivas">
+            </figure>
+            <h1>Cómo destacar en el mercado laboral sin volverte un robot</h1>
+            <p class="post-meta">Dani Sanabria · 2026</p>
+
+            <p>¡Hola! Soy Dani Sanabria. Si sentís que buscar trabajo hoy en día es una carrera cuesta arriba donde te piden mil años de experiencia y encima tenés que competir contra herramientas de Inteligencia Artificial que hacen todo en segundos, dejame decirte algo: no estás exagerando, es realmente frustrante. Es súper comprensible sentir esa incertidumbre cuando ves que las tareas técnicas que te enseñaron en la facultad se automatizan de la noche a la mañana.</p>
+            <p>Pero acá está el secreto que nadie te cuenta en la facultad: la IA no vino a dejarte afuera, vino a sacarse de encima lo aburrido para que vos puedas brillar en lo que un software jamás va a poder replicar. Si querés dejar de mandar CVs al vacío y empezar a construir una carrera con verdadero futuro, el camino no es competir en velocidad con una máquina, sino potenciar tus habilidades humanas más auténticas.</p>
+
+            <hr class="divider">
+
+            <h2>1. Empatía: Tu poder para conectar donde la tecnología no llega</h2>
+            <p>Las máquinas pueden procesar datos, pero no pueden comprender emociones, necesidades ni construir relaciones basadas en la confianza.</p>
+            <ul>
+                <li><strong>Escuchar activamente</strong> a clientes y compañeros te permite anticipar problemas y ofrecer soluciones personalizadas que marcan la diferencia.</li>
+                <li><strong>Desarrollar tu inteligencia emocional</strong> te posiciona como una persona clave para liderar y colaborar en equipos diversos.</li>
+            </ul>
+
+            <h2>2. Creatividad: El arte de resolver lo que el algoritmo no entiende</h2>
+            <p>La IA es excelente siguiendo patrones, pero falla ante desafíos inesperados que requieren pensar fuera de la caja.</p>
+            <ul>
+                <li><strong>Aportar enfoques no convencionales</strong> transforma problemas complejos en oportunidades reales de innovación.</li>
+                <li><strong>Involucrarte en proyectos variados e interdisciplinarios</strong> entrena tu mente para encontrar respuestas donde otros solo verían un bloqueo.</li>
+            </ul>
+
+            <h2>3. Adaptabilidad: Surfear los cambios digitales sin entrar en pánico</h2>
+            <p>Las herramientas tecnológicas y las normativas cambian rápido; por eso, la capacidad de adaptarte es una de las competencias más valoradas en el mercado laboral actual.</p>
+            <ul>
+                <li><strong>En lugar de temerle a los nuevos entornos y software,</strong> sumate a probarlos para usarlos a tu favor en la rutina diaria.</li>
+                <li><strong>Cultivar una mentalidad flexible</strong> te permite tomar decisiones acertadas incluso bajo presión o en momentos de incertidumbre.</li>
+            </ul>
+
+            <h2>4. Comunicación efectiva: Traducir datos complejos en ideas claras</h2>
+            <p>De nada sirve que la tecnología genere volúmenes gigantescos de información si nadie sabe cómo interpretar esos datos para actuar.</p>
+            <ul>
+                <li><strong>Saber transmitir conclusiones de forma sencilla</strong> te convierte en el puente clave entre los datos técnicos y quienes toman las decisiones.</li>
+                <li><strong>Practicar tus presentaciones orales y tu redacción</strong> le suma un valor gigante a tu perfil profesional.</li>
+            </ul>
+
+            <h2>5. Mentoría y aprendizaje continuo: Guiar tu carrera con apoyo real</h2>
+            <p>El crecimiento no termina cuando salís de la universidad; la mejora continua es una constante a lo largo de toda tu vida profesional.</p>
+            <ul>
+                <li><strong>Buscar mentores y profesionales con experiencia</strong> te brinda una orientación práctica e invalorable sobre lo que realmente busca el mercado.</li>
+                <li><strong>Aprovechar el feedback constante</strong> te ayuda a identificar tus fortalezas y corregir el rumbo a tiempo con un plan personalizado.</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>El mercado laboral puede parecer caótico y acelerado</h2>
+            <p>Pero cuando aprendés a usar la tecnología como aliada y fortalecés tus habilidades blandas, las oportunidades empiezan a aparecer.</p>
+            <p>Si querés que revisemos tu caso juntas, destrabemos tus dudas de carrera o armemos un plan de acción 100% a tu medida, agendá tu mentoría 1:1 o mandame tu consulta por WhatsApp a través de la web.</p>
+            <p>Estoy acá para acompañarte a dar ese salto ;)</p>
+
+            <div class="post-cta">
+                <h3>¿Lista para dar ese salto en tu carrera?</h3>
+                <p>Revisemos tu caso juntas, destrabemos tus dudas o armemos un plan de acción a tu medida.</p>
+                <a href="../index.html#contacto-form" class="btn">Agendar sesión →</a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        &copy; 2026 Dani Sanabria | Mentoría laboral. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
