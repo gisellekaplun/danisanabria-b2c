@@ -67,7 +67,7 @@
   -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cosmic-bg: #0B0813;
@@ -644,15 +644,16 @@
       align-items: center;
       gap: 2.5rem;
     }
-    .radial-text h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--kit-white); font-family: 'Baloo 2', sans-serif; }
+    .radial-text h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--kit-white); font-family: 'Geomini', sans-serif; }
     .radial-text .kit-line {
       font-size: 1.15rem;
       font-weight: 700;
-      color: var(--kit-accent);
+      color: var(--kit-white);
       margin: -0.6rem 0 1.4rem;
-      font-family: 'Baloo 2', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .radial-text p { color: var(--kit-muted); margin-bottom: 0.85rem; font-size: 1.02rem; font-family: 'Inter', sans-serif; }
+    .radial-text .kit-line .kit-highlight { color: var(--kit-accent); }
+    .radial-text p { color: var(--kit-muted); margin-bottom: 0.85rem; font-size: 1.02rem; font-family: 'Plus Jakarta Sans', sans-serif; }
     .radial-text p strong { color: var(--kit-white); }
     .radial-text .kit-close { margin-top: 0.6rem; color: var(--kit-white); }
 
@@ -681,7 +682,7 @@
       padding: 40px;
       box-sizing: border-box;
       z-index: 2;
-      font-family: 'Baloo 2', sans-serif;
+      font-family: 'Geomini', sans-serif;
       font-weight: 700;
       font-size: 1.05rem;
       line-height: 1.3;
@@ -700,27 +701,36 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 30px;
+      padding: 26px;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .radial-sat:hover { transform: scale(1.04); box-shadow: 0 0 24px rgba(185, 167, 240, 0.28); }
     .radial-sat .sat-emoji { font-size: 1.6rem; margin-bottom: 0.3rem; }
     .radial-sat strong {
-      font-family: 'Baloo 2', sans-serif;
+      display: block;
+      font-family: 'Geomini', sans-serif;
       font-weight: 700;
-      font-size: 1.02rem;
+      font-size: 0.85rem;
       line-height: 1.25;
       color: var(--kit-white);
-      max-width: 120px;
+      max-width: 116px;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
     }
     .radial-sat .sat-desc {
+      display: block;
       font-size: 10.5px;
       color: var(--kit-muted);
       line-height: 1.35;
       margin-top: 0.35rem;
       max-width: 122px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 100%;
     }
     .radial-sat.sat-top { left: 50%; top: calc(50% - 105px - 24px - 168px); transform: translateX(-50%); }
     .radial-sat.sat-bottom { left: 50%; top: calc(50% + 105px + 24px); transform: translateX(-50%); }
@@ -1458,8 +1468,8 @@
         justify-self: center;
       }
       .radial-sat .sat-emoji { font-size: 1.35rem; margin-bottom: 0.25rem; }
-      .radial-sat strong { font-size: 0.95rem; max-width: 112px; }
-      .radial-sat .sat-desc { max-width: 112px; }
+      .radial-sat strong { font-size: 0.8rem; max-width: 108px; }
+      .radial-sat .sat-desc { max-width: 110px; }
       .radial-sat.sat-top, .radial-sat.sat-bottom,
       .radial-sat.sat-left, .radial-sat.sat-right {
         top: auto; bottom: auto; left: auto; right: auto;
@@ -1608,7 +1618,7 @@
     <div class="radial-wrap">
       <div class="radial-text">
         <h2>¿Qué incluye la mentoría laboral?</h2>
-        <p class="kit-line">🎒 Un kit profesional con todo lo necesario para salir al mercado</p>
+        <p class="kit-line">Un kit profesional con <span class="kit-highlight">todo lo necesario</span> para salir al mercado</p>
         <p><strong>POV:</strong> Buscás tu primer empleo profesional.</p>
         <p><strong>POV:</strong> Querés cambiar de trabajo.</p>
         <p><strong>POV:</strong> Sentís que no crecés donde estás.</p>
@@ -1981,6 +1991,7 @@
     document.querySelectorAll('.nav-trigger').forEach(function (trigger) {
       trigger.addEventListener('click', function (e) {
         e.preventDefault();
+        irPropuestaSeccion('b2c', 'que-es');
         const item = trigger.closest('.has-mega');
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.nav-item.has-mega.open').forEach(function (el) { el.classList.remove('open'); });
