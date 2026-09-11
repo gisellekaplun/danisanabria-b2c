@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más allá del salario: Qué busca hoy la Gen Z en el trabajo | Daniela Sanabria</title>
+    <meta name="description" content="Trifecta de la felicidad laboral, crecimiento en habilidades, jefes mentores y bienestar: las claves de la Gen Z para construir tu carrera ideal. Por Daniela Sanabria.">
+    <meta property="og:title" content="Más allá del salario: Qué busca hoy la Gen Z en el trabajo | Daniela Sanabria">
+    <meta property="og:description" content="La satisfacción laboral no se mide solo en sueldo: dinero, significado y bienestar. Descubrí qué valora la Gen Z y cómo construir tu carrera ideal. Por Daniela Sanabria.">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cosmic-bg: #17161a;
+            --cosmic-card: #232226;
+            --cosmic-card-hover: #2d2c30;
+            --accent-pink: #c9a0f1;
+            --accent-green: #e6338a;
+            --text-main: #fafafa;
+            --text-muted: #a0a0a8;
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #17161a 0%, #1a1920 40%, #1f1d26 70%, #17161a 100%);
+            background-attachment: fixed;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3, h4 { font-family: 'Geomini', sans-serif; color: var(--text-main); line-height: 1.4; }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(23, 22, 26, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.3rem; color: var(--accent-pink); }
+        .logo span { color: var(--text-main); }
+        .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.6rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-links a.active { color: var(--accent-green); }
+
+        /* ARTICULO */
+        .post {
+            padding: 130px 24px 80px;
+        }
+        .post-back {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 32px;
+            transition: color 0.3s;
+        }
+        .post-back:hover { color: var(--accent-pink); }
+        .post-cat {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--accent-pink);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .post h1 {
+            font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+            margin-bottom: 16px;
+        }
+        .post-cover {
+            margin: 0 0 28px;
+        }
+        .post-cover img {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
+        }
+        .post-meta { font-size: 0.82rem; color: var(--text-muted); opacity: 0.8; margin-bottom: 40px; }
+
+        .post p { margin-bottom: 22px; font-size: 1.02rem; }
+
+        .post h2 {
+            font-size: 1.6rem;
+            margin: 44px 0 14px;
+        }
+        .post h2::before {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-pink));
+            margin-bottom: 18px;
+        }
+
+        .post h3 {
+            font-size: 1.2rem;
+            margin: 28px 0 10px;
+            color: var(--accent-pink);
+        }
+        .post ul, .post ol { margin: 0 0 22px 24px; }
+        .post li { margin-bottom: 8px; }
+        .post li strong { color: var(--text-main); }
+
+        .post .divider {
+            border: 0;
+            height: 1px;
+            background: var(--glass-border);
+            margin: 40px 0;
+        }
+
+        .post .sources {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            opacity: 0.85;
+            margin-top: 8px;
+        }
+        .post .sources strong { color: var(--text-main); }
+
+        /* CTA FINAL */
+        .post-cta {
+            background: var(--cosmic-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-top: 48px;
+            text-align: center;
+        }
+        .post-cta h3 { font-size: 1.35rem; margin-bottom: 10px; color: var(--accent-green); }
+        .post-cta p { font-size: 0.98rem; margin-bottom: 20px; }
+        .post-cta .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-green));
+            color: #0B0813;
+            font-weight: 800;
+            padding: 12px 30px;
+            border-radius: 999px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .post-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(236, 81, 220, 0.35);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">Dani <span>Sanabria</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#como-funciona">Servicios</a></li>
+                <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../preguntas-frecuentes.html">FAQs</a></li>
+                <li><a href="../index.html#contacto-form">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ARTICULO -->
+    <article class="post">
+        <div class="container">
+            <a href="../blog.html" class="post-back">← Volver al blog</a>
+            <span class="post-cat">Carrera · Gen Z</span>
+            <figure class="post-cover">
+                <img src="woman-breathing-meditating-peaceful-inhale-free-relaxed-practice-yoga-feel-relieved-standing-white-web.jpg" alt="Mujer respirando tranquila en un espacio luminoso y en calma">
+            </figure>
+            <h1>Más allá del salario: Qué busca hoy la Gen Z en el trabajo y cómo construir tu carrera ideal</h1>
+            <p class="post-meta">Dani Sanabria · 2026</p>
+
+            <p>Buscar trabajo hoy en día puede sentirse como una maratón interminable donde las exigencias aumentan, los procesos se vuelven fríos y la sensación de mandar CVs sin obtener respuestas genera muchísima frustración.</p>
+            <p>Es completamente comprensible sentir incertidumbre cuando ves que los modelos laborales tradicionales parecen desconectados de tus necesidades y expectativas reales. Pero no estás a la deriva ni estás exigiendo demasiado: lo que ocurre es que la forma de entender el éxito laboral cambió profundamente para nuestra generación.</p>
+            <p>Para construir una carrera profesional que disfrutes sin quemarte en el intento, primero tenés que entender qué factores pesan más allá del sueldo y cómo podés usarlos a tu favor.</p>
+
+            <hr class="divider">
+
+            <h2>Más allá del salario: las claves de la Gen Z en el mercado actual</h2>
+
+            <h3>1. La "Trifecta" de la felicidad laboral</h3>
+            <p>El éxito económico ya no es el único indicador de un buen empleo. La satisfacción profesional actual se sostiene en el equilibrio de tres pilares fundamentales: dinero, significado y bienestar. Si alguno de estos tres factores falta, es casi seguro que aparezcan el desinterés y la insatisfacción.</p>
+
+            <h3>2. Crecer en habilidades, no en cargos para "presumir"</h3>
+            <p>Solo el 6% de los jóvenes de la Gen Z tiene como meta principal alcanzar una posición de liderazgo tradicional. Sin embargo, el 70% desarrolla habilidades para hacer avanzar su carrera al menos una vez por semana. La ambición sigue intacta, pero hoy priorizamos sumar herramientas de crecimiento reales por sobre la simple gestión de equipos.</p>
+
+            <h3>3. Jefes que inspiren: la búsqueda de mentores</h3>
+            <p>Existe una desconexión crítica en las empresas: mientras los jóvenes buscan jefes que actúen como mentores, inspiren y ayuden a marcar límites, muchos managers se limitan únicamente a supervisar tareas diarias. Para superar este vacío, es clave que identifiques empresas con una cultura de mentoreo y definas con claridad la metodología de trabajo en la que mejor rendís.</p>
+
+            <h3>4. Estabilidad financiera y escepticismo educativo</h3>
+            <p>La inseguridad económica es un dolor cotidiano, ya que el 48% de la Gen Z no se siente financieramente segura y vive al día. Al mismo tiempo, cerca de un tercio decidió no realizar estudios superiores cuestionando su retorno de inversión, y el 40% teme el alto costo de las matrículas. Por eso, la planificación estratégica de carrera y la formación práctica de alto impacto se convirtieron en herramientas de supervivencia indispensables.</p>
+
+            <h3>5. Propósito y cultura empresarial consciente</h3>
+            <p>Para el 89% de los jóvenes, el propósito es un pilar vital para su satisfacción en el empleo. De hecho, el 31% planea cambiar de empleador en los próximos dos años buscando estabilidad y una misión que los identifique. Esta búsqueda de valores también se refleja en el medio ambiente: el 65% experimenta ansiedad ambiental y un 23% investiga activamente las políticas ecológicas de una empresa antes de aceptar una oferta.</p>
+
+            <h3>6. Salud mental y las "Soft Skills" frente a la IA</h3>
+            <p>El trabajo es una de las mayores fuentes de tensión, provocando que el 40% de la Gen Z se sienta estresado o ansioso todo el tiempo y que solo el 52% califique su salud mental como buena. Aunque el 57% ya utiliza herramientas de IA generativa en sus rutinas, las habilidades blandas —como la empatía y el liderazgo humano— son más valiosas que nunca para diferenciarse. Un entorno laboral estructurado y organizado es la mejor medicina contra la ansiedad operativa.</p>
+
+            <hr class="divider">
+
+            <h2>Tomá el control de tu futuro profesional</h2>
+            <p>No bajes los brazos ni te conformes con lugares que apagan tu motivación. El mercado laboral está cambiando y vos tenés el poder de elegir y construir un camino profesional alineado con tu bienestar, tus finanzas y tus valores.</p>
+            <p>Si querés que analicemos tu perfil, redefinamos tu estrategia de búsqueda laboral o diseñemos un plan de acción a tu medida, agendá tu mentoría 1:1 o enviame tu consulta por WhatsApp a través de la web.</p>
+            <p>Estoy acá para acompañarte a dar ese próximo gran paso! 🚀</p>
+            <p>✨ ¿Te gustaría que preparemos también una guía con preguntas clave para hacer en tus próximas entrevistas laborales y evaluar si una empresa cumple con este equilibrio?</p>
+
+            <div class="post-cta">
+                <h3>¿Lista para construir una carrera que disfrutes?</h3>
+                <p>Analicemos tu perfil, redefinamos tu estrategia de búsqueda o diseñemos un plan de acción a tu medida.</p>
+                <a href="../index.html#contacto-form" class="btn">Gestionar sesión →</a>
+            </div>
+
+            <hr class="divider">
+
+            <p class="sources"><strong>Fuentes y Referencias (Normas APA)</strong><br>Deloitte. (2025). Global 2025 Gen Z and Millennial Survey: Growth and the pursuit of money, meaning, and well-being. Deloitte Touche Tohmatsu Limited.</p>
+        </div>
+    </article>
+
+    <footer>
+        &copy; 2026 Dani Sanabria | Mentoría laboral. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
