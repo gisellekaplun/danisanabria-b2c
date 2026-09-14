@@ -67,7 +67,7 @@
   -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cosmic-bg: #0B0813;
@@ -123,9 +123,9 @@
       z-index: 100;
       border-bottom: 1px solid var(--glass-border);
     }
-    .logo { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.04rem; color: var(--accent-pink); flex-shrink: 0; }
-    .logo span { color: var(--text-main); }
-    .logo .logo-sub { font-style: normal; font-size: 0.72rem; font-weight: 600; color: var(--text-muted); }
+    .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
+    .logo img { height: 40px; width: auto; max-width: 190px; object-fit: contain; display: block; }
+    @media (max-width: 768px) { .logo img { height: 34px; max-width: 160px; } }
 
     .nav-center { display: flex; align-items: center; }
     .nav-links {
@@ -1533,7 +1533,9 @@
 
   <!-- ===== NAV ===== -->
   <nav>
-    <div class="logo">Dani <span>Sanabria</span> <em class="logo-sub">| Mentoría laboral</em></div>
+    <a href="/" class="logo" aria-label="Dani Sanabria - Mentora de Carrera">
+      <img src="img/logo-daniela-sanabria.png" alt="Dani Sanabria - Mentora de Carrera">
+    </a>
     <div class="nav-center">
       <ul class="nav-links" id="navLinks">
         <li><a href="#inicio" onclick="irInicio(); return false;">Inicio</a></li>
