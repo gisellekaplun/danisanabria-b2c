@@ -1383,8 +1383,10 @@
       .menu-toggle { display: block; order: 2; }
       .nav-links.open {
         display: flex;
-        position: fixed;
-        top: 57px; left: 0; right: 0; bottom: 0;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        height: calc(100vh - 100%);
+        height: calc(100dvh - 100%);
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
@@ -2011,7 +2013,6 @@
     document.querySelectorAll('.nav-trigger').forEach(function (trigger) {
       trigger.addEventListener('click', function (e) {
         e.preventDefault();
-        irPropuestaSeccion('b2c', 'que-es');
         const item = trigger.closest('.has-mega');
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.nav-item.has-mega.open').forEach(function (el) { el.classList.remove('open'); });

@@ -164,12 +164,14 @@
       .menu-toggle { display: block; order: 2; }
       .nav-links.open {
         display: flex;
-        position: fixed;
-        top: 57px; left: 0; right: 0; bottom: 0;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        height: calc(100vh - 100%);
+        height: calc(100dvh - 100%);
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        background: rgba(11,8,19,0.97);
+        background: rgba(48,48,46,0.97);
         backdrop-filter: blur(16px);
         padding: 1.2rem 1.6rem calc(1.6rem + env(safe-area-inset-bottom));
         gap: 0.9rem;
