@@ -8,7 +8,7 @@
     <meta property="og:title" content="Más allá del salario: Qué busca hoy la Gen Z en el trabajo | Daniela Sanabria">
     <meta property="og:description" content="La satisfacción laboral no se mide solo en sueldo: dinero, significado y bienestar. Descubrí qué valora la Gen Z y cómo construir tu carrera ideal. Por Daniela Sanabria.">
     <meta property="og:type" content="article">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --cosmic-bg: #17161a;
@@ -53,8 +53,9 @@
             justify-content: space-between;
             height: 64px;
         }
-        .logo { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 1.3rem; color: var(--accent-pink); }
-        .logo span { color: var(--text-main); }
+        .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
+        .logo img { height: 40px; width: auto; max-width: 190px; object-fit: contain; display: block; }
+        @media (max-width: 768px) { .logo img { height: 34px; max-width: 160px; } }
         .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
         .nav-links a { color: var(--text-muted); font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.6rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--text-main); }
@@ -176,7 +177,9 @@
     <!-- NAV -->
     <nav>
         <div class="nav-inner">
-            <a href="../index.html" class="logo">Dani <span>Sanabria</span></a>
+            <a href="../index.html" class="logo" aria-label="Dani Sanabria - Mentora de Carrera">
+                <img src="../img/logo-daniela-sanabria.png" alt="Dani Sanabria - Mentora de Carrera">
+            </a>
             <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../index.html#como-funciona">Servicios</a></li>
