@@ -1313,6 +1313,15 @@
     #faq-home .faq-list,
     #faq-home .faq-cta { position: relative; z-index: 1; max-width: 800px; margin-left: auto; margin-right: auto; }
     #faq-home .faq-question { text-align: left; }
+    @media (max-width: 768px) {
+      #faq-home::before {
+        background:
+          linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(253,251,247,0.45) 40%, rgba(255,255,255,0.52) 70%, rgba(245,243,238,0.6) 100%),
+          url('faqs-fondo-home.webp') center / cover no-repeat;
+        background-color: #ffffff;
+        background-position: center;
+      }
+    }
 
     footer {
       background: var(--color-dark-block);
@@ -1364,7 +1373,10 @@
       .hero-panel-content { padding: 1.1rem 1.6rem 1.3rem; }
     }
     @media (max-width: 900px) {
+      #que-es { padding-top: 6rem; }
       .radial-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .radial-text h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 1rem; }
+      .radial-text .kit-line { font-size: 1.05rem; margin: 0.2rem 0 1.2rem; }
       .sobre-mi-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
       .sobre-mi-photo { width: 100%; max-width: 420px; height: 380px; margin: 0 auto; }
       .phases { grid-template-columns: 1fr; }
