@@ -126,7 +126,7 @@
 
     /* ===== NAV ===== */
     nav {
-      position: relative; width: 100%;
+      position: fixed; top: 0; left: 0; width: 100%;
       padding: 0.64rem 1.6rem;
       background: rgba(48, 48, 46, 0.85);
       backdrop-filter: blur(16px);
@@ -223,12 +223,12 @@
     .mega-mini strong .arrow { margin-left: auto; opacity: 0; transform: translateX(-4px); transition: opacity 0.25s ease, transform 0.25s ease; color: #b588fd; }
     .mega-mini:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(181, 136, 253, 0.45); transform: translateY(-2px); }
     .mega-mini:hover strong .arrow { opacity: 1; transform: translateX(0); }
-    #como-funciona { scroll-margin-top: 20px; }
+#como-funciona { scroll-margin-top: 90px; }
 
     .menu-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.2rem; cursor: pointer; }
 
     /* ===== SECTIONS ===== */
-    section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; scroll-margin-top: 20px; }
+    section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; scroll-margin-top: 90px; }
     .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
     .section-title.pink { color: var(--accent-pink); }
     .section-title.purple { color: var(--accent-green); }
@@ -248,7 +248,7 @@
     }
 
     /* Hero Unificado (mensaje puentes) */
-    .inicio-shell { max-width: 100%; padding: 0; margin: 0 auto; scroll-margin-top: 20px; }
+    .inicio-shell { max-width: 100%; padding: 0; margin: 0 auto; scroll-margin-top: 90px; }
     .hero-unified {
       min-height: 72vh;
       display: flex;
@@ -1423,7 +1423,7 @@
       .mega-panel .mega-link { padding: 0.5rem 0.75rem; margin: 0 -0.75rem; }
       .mega-panel .mega-col h4 { margin-bottom: 0.3rem; }
       section { padding: 3rem 1.2rem; }
-      section, .inicio-shell, #como-funciona { scroll-margin-top: 20px; }
+      section, .inicio-shell, #como-funciona { scroll-margin-top: 90px; }
       section, .hero-unified-content, .service-content, .service-actions,
       .about-text, .manifesto-text, .cta-section, .faq-section,
       .pricing-card { text-align: center; }
