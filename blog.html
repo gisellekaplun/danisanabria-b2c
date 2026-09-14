@@ -11,25 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cosmic-bg: #17161a;
-            --cosmic-card: #232226;
-            --cosmic-card-hover: #2d2c30;
-            --accent-pink: #c9a0f1;
-            --accent-green: #e6338a;
-            --text-main: #fafafa;
-            --text-muted: #a0a0a8;
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --glass-bg: rgba(23, 22, 26, 0.6);
+            --color-bg-main: #30302e;
+            --color-text-main: #ffffff;
+            --color-primary: #b588fd;
+            --color-accent: #cad12b;
+
+            --cosmic-bg: #30302e;
+            --cosmic-card: #3a3a37;
+            --cosmic-card-hover: #454541;
+            --accent-pink: #b588fd;
+            --accent-green: #cad12b;
+            --text-main: #ffffff;
+            --text-muted: #c9c9c4;
+            --glass-border: rgba(255, 255, 255, 0.10);
+            --glass-bg: rgba(48, 48, 46, 0.6);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background:
-                linear-gradient(rgba(23, 22, 26, 0.9), rgba(23, 22, 26, 0.9)),
+                linear-gradient(rgba(48, 48, 46, 0.9), rgba(48, 48, 46, 0.9)),
                 url('top-view-desk-arrangement-copy-space-web.jpg') center / cover fixed;
             background-color: var(--cosmic-bg);
-            color: var(--text-muted);
+            color: var(--text-main);
             line-height: 1.7;
         }
 
@@ -44,7 +49,7 @@
             top: 0;
             left: 0; right: 0;
             z-index: 1000;
-            background: rgba(23, 22, 26, 0.85);
+            background: rgba(48, 48, 46, 0.85);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--glass-border);
         }
@@ -113,7 +118,7 @@
         }
         .blog-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(201, 160, 241, 0.45);
+            border-color: rgba(181, 136, 253, 0.45);
             background: var(--cosmic-card-hover);
         }
         .blog-card .cat {
