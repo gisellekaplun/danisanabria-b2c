@@ -51,19 +51,16 @@
             top: 0;
             left: 0; right: 0;
             z-index: 1000;
-            background: rgba(48, 48, 46, 0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 3px solid var(--color-accent);
-        }
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 64px;
+            background: rgba(48, 48, 46, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 3px solid var(--color-accent);
+            padding: 0.8rem 2rem;
         }
+        .nav-center { display: flex; align-items: center; }
+        .menu-toggle { display: none; background: none; border: none; color: #ffffff; font-size: 1.2rem; cursor: pointer; }
         .logo {
             display: inline-flex;
             align-items: center;
@@ -157,10 +154,29 @@
 
         /* RESPONSIVE */
         @media (max-width: 640px) {
-            .nav-inner { flex-wrap: wrap; justify-content: center; gap: 6px; height: auto; padding: 10px 16px; }
-            .nav-links { flex-wrap: wrap; justify-content: center; gap: 2px; }
-            .nav-links a { font-size: 0.82rem; padding: 0.3rem 0.4rem; }
-            .blog-hero { padding-top: 150px; }
+            nav { padding: 0.7rem 1.2rem; flex-wrap: wrap; gap: 0.5rem; backdrop-filter: none; background: rgba(48,48,46,0.96); }
+            .nav-center { order: 4; width: 100%; }
+            .nav-links { display: none; }
+            .menu-toggle { display: block; order: 2; }
+            .nav-links.open {
+                display: flex;
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                z-index: 9999;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                background: rgba(48,48,46,0.98);
+                backdrop-filter: blur(20px);
+                padding: 72px 2rem calc(2rem + env(safe-area-inset-bottom));
+                gap: 0.25rem;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .nav-links.open > li { width: 100%; max-width: 400px; text-align: center; }
+            .nav-links.open > li > a { display: block; padding: 0.55rem 0.5rem; color: #ffffff; font-size: 0.88rem; }
+            .nav-links.open > li > a.active { color: var(--accent-green); }
+            .blog-hero { padding-top: 110px; }
         }
     </style>
 </head>
@@ -168,11 +184,11 @@
 
     <!-- NAV -->
     <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="logo" aria-label="Dani Sanabria - Mentora de Carrera">
-                <img src="img/logo-daniela-sanabria.png" alt="Dani Sanabria - Mentora de Carrera">
-            </a>
-            <ul class="nav-links">
+        <a href="index.html" class="logo" aria-label="Dani Sanabria - Mentora de Carrera">
+            <img src="img/logo-daniela-sanabria.png" alt="Dani Sanabria - Mentora de Carrera">
+        </a>
+        <div class="nav-center">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#como-funciona">Servicios</a></li>
                 <li><a href="index.html#sobre-mi">Sobre mí</a></li>
@@ -181,6 +197,7 @@
                 <li><a href="index.html#contacto-form">Contacto</a></li>
             </ul>
         </div>
+        <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
     </nav>
 
     <!-- HERO -->
@@ -197,7 +214,7 @@
     </section>
 
     <footer>
-        &copy; 2026 Dani Sanabria | Mentoría laboral. Todos los derechos reservados.
+        &copy; 2026 Daniela Sanabria | Mentoría laboral. Todos los derechos reservados.
     </footer>
 
     <script>
