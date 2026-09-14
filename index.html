@@ -1300,10 +1300,9 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(135deg, #30302e 0%, #383834 40%, #41413d 70%, #30302e 100%);
-      background-size: cover;
-      background-position: center;
-      opacity: 0.95;
+        linear-gradient(135deg, rgba(48,48,46,0.82) 0%, rgba(56,56,52,0.68) 40%, rgba(65,65,61,0.7) 70%, rgba(48,48,46,0.88) 100%),
+        url('faqs-fondo-home.webp') center / cover no-repeat;
+      background-color: #30302e;
       z-index: 0;
     }
     #faq-home .section-title,
@@ -1397,30 +1396,12 @@
         -webkit-overflow-scrolling: touch;
       }
       .nav-links.open > li { width: 100%; max-width: 400px; text-align: center; }
-      .nav-links.open > li > a { display: block; padding: 0.75rem 0.5rem; color: var(--text-main); font-size: 0.9rem; }
+      .nav-links.open > li > a { display: block; padding: 0.55rem 0.5rem; color: var(--text-main); font-size: 0.88rem; }
       .nav-item.has-mega::after { display: none; }
+      .nav-item.has-mega .nav-caret { display: none; }
       .mega-panel {
-        position: static;
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto 0.3rem;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        display: none;
-        background: rgba(255,255,255,0.04);
-        border-left: none;
-        border-radius: 12px;
-        border: 1px solid var(--glass-border);
-        padding: 0.8rem;
-        transition: none;
+        display: none !important;
       }
-      .nav-item.has-mega.open .mega-panel { display: block; }
-      .mega-inner { grid-template-columns: 1fr; gap: 0.6rem; }
-      .nav-item.has-mega.open .nav-caret { transform: rotate(180deg); opacity: 1; }
-      .mega-panel .mega-link { padding: 0.6rem 0.75rem; margin: 0; border-radius: 10px; text-align: left; }
-      .mega-panel .mega-col h4 { margin-bottom: 0.3rem; }
       section { padding: 3rem 1.2rem; }
       section, .inicio-shell, #como-funciona { scroll-margin-top: 90px; }
       section, .hero-unified-content, .service-content, .service-actions,
@@ -1953,12 +1934,7 @@
       <label for="form-telefono">Teléfono / WhatsApp
         <input type="tel" id="form-telefono" name="telefono" placeholder="Tu teléfono">
       </label>
-    <label for="form-segmento">¿Qué te interesa?
-      <select id="form-segmento" name="segmento">
-        <option value="b2c">Mentoría de carrera individual</option>
-      </select>
-    </label>
-      <label for="form-mensaje">Mensaje
+    <label for="form-mensaje">Mensaje
         <textarea id="form-mensaje" name="mensaje" placeholder="Contame brevemente tu situación..." required></textarea>
       </label>
       <button type="submit" class="btn">Enviar consulta</button>
@@ -2010,6 +1986,10 @@
     document.querySelectorAll('.nav-trigger').forEach(function (trigger) {
       trigger.addEventListener('click', function (e) {
         e.preventDefault();
+        if (window.innerWidth <= 768) {
+          irPropuestaSeccion('b2c', 'que-es');
+          return;
+        }
         const item = trigger.closest('.has-mega');
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.nav-item.has-mega.open').forEach(function (el) { el.classList.remove('open'); });
@@ -2039,9 +2019,6 @@
       const btnB2C = document.getElementById('toggleB2C');
       if (btnB2C) btnB2C.classList.add('active');
 
-      const segmento = document.getElementById('form-segmento');
-      if (segmento) segmento.value = 'b2c';
-
       document.getElementById('navLinks').classList.remove('open');
     }
 
@@ -2051,7 +2028,6 @@
       const nombre = this.querySelector('#form-nombre').value;
       const email = this.querySelector('#form-email').value;
       const telefono = this.querySelector('#form-telefono').value;
-      const segmento = this.querySelector('#form-segmento').value;
 
       const btn = this.querySelector('.btn');
       btn.disabled = true;
@@ -2067,7 +2043,6 @@
           nombre: nombre,
           email: email,
           telefono: telefono,
-          segmento: segmento,
           mensaje: msg
         })
       })
