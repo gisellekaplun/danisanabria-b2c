@@ -11,25 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-bg-main: #30302e;
-            --color-text-main: #ffffff;
+            --color-bg-main: #ffffff;
+            --color-bg-secondary: #fdfbf7;
+            --color-text-main: #30302e;
             --color-primary: #b588fd;
             --color-accent: #cad12b;
+            --color-dark-block: #30302e;
 
-            --cosmic-bg: #30302e;
-            --cosmic-card: #3a3a37;
-            --cosmic-card-hover: #454541;
+            --cosmic-bg: #ffffff;
+            --cosmic-card: #ffffff;
+            --cosmic-card-hover: #fdfbf7;
             --accent-pink: #b588fd;
             --accent-green: #cad12b;
-            --text-main: #ffffff;
-            --text-muted: #c9c9c4;
-            --glass-border: rgba(255, 255, 255, 0.10);
+            --text-main: #30302e;
+            --text-muted: #5b5b56;
+            --glass-border: rgba(48, 48, 46, 0.12);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, #30302e 0%, #383834 40%, #41413d 70%, #30302e 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #fdfbf7 40%, #ffffff 70%, #f5f3ee 100%);
             background-attachment: fixed;
             color: var(--text-main);
             line-height: 1.8;
@@ -45,7 +47,7 @@
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 1000;
-            background: rgba(48, 48, 46, 0.85);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--glass-border);
         }
@@ -59,7 +61,7 @@
             height: 64px;
         }
         .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
-        .logo img { height: 40px; width: auto; max-width: 190px; object-fit: contain; display: block; }
+        .logo img { height: 40px; width: auto; max-width: 190px; object-fit: contain; display: block; filter: brightness(0); opacity: 0.85; }
         @media (max-width: 768px) { .logo img { height: 34px; max-width: 160px; } }
         .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
         .nav-links a { color: var(--text-main); font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.6rem; transition: color 0.3s; }
@@ -161,11 +163,12 @@
 
         /* FOOTER */
         footer {
-            border-top: 1px solid var(--glass-border);
+            background: var(--color-dark-block);
+            color: rgba(255, 255, 255, 0.75);
+            border-top: 3px solid var(--color-accent);
             padding: 32px 24px;
             text-align: center;
             font-size: 0.85rem;
-            color: var(--text-main);
         }
     </style>
 </head>
