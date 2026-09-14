@@ -1,6 +1,6 @@
-# Dani Sanabria — Mentoría Laboral (Versión 3)
+# Daniela Sanabria — Mentoría Laboral (Versión 3)
 
-Landing page para Dani Sanabria, mentora laboral especializada en mentoría individual para jóvenes profesionales.
+Landing page para Daniela Sanabria, mentora laboral individual para jóvenes profesionales.
 
 ## Estructura
 
