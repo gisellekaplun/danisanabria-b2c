@@ -60,6 +60,11 @@
         .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
         .logo img { height: 40px; width: auto; max-width: 190px; object-fit: contain; display: block; }
         @media (max-width: 768px) { .logo img { height: 34px; max-width: 160px; } }
+        .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+        .nav-links a { color: rgba(255,255,255,0.75); font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.6rem; transition: color 0.3s; }
+        .nav-links a:hover { color: #ffffff; }
+        .nav-links a.active { color: var(--accent-green); }
+
         @media (max-width: 640px) {
             nav { padding: 0.7rem 1.2rem; flex-wrap: wrap; gap: 0.5rem; backdrop-filter: none; background: rgba(48,48,46,0.96); }
             .nav-center { order: 4; width: 100%; }
@@ -85,10 +90,6 @@
             .nav-links.open > li > a.active { color: var(--accent-green); }
             .post { padding-top: 150px; }
         }
-        .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
-        .nav-links a { color: rgba(255,255,255,0.75); font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.6rem; transition: color 0.3s; }
-        .nav-links a:hover { color: #ffffff; }
-        .nav-links a.active { color: var(--accent-green); }
 
         /* ARTICULO */
         .post {
