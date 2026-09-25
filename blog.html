@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guías y herramientas para tu futuro profesional | Daniela Sanabria</title>
+    <link rel="icon" type="image/png" href="../Isotipo Daniela Sanabria-06.png">
+    <link rel="apple-touch-icon" href="../Isotipo Daniela Sanabria-06.png">
     <meta name="description" content="Guías y herramientas para tu primer empleo, tu búsqueda laboral y cómo construir una carrera con estrategia en la era de la IA. Por Daniela Sanabria.">
     <meta property="og:title" content="Guías y herramientas para tu futuro profesional | Daniela Sanabria">
     <meta property="og:description" content="Guías y herramientas para tu primer empleo, tu búsqueda laboral y cómo construir una carrera con estrategia en la era de la IA. Por Daniela Sanabria.">
@@ -175,6 +177,21 @@
             }
             .nav-links.open > li { width: 100%; max-width: 400px; text-align: center; }
             .nav-links.open > li > a { display: block; padding: 0.55rem 0.5rem; color: #ffffff; font-size: 0.88rem; }
+            .nav-close {
+                display: none;
+                position: fixed;
+                top: 18px;
+                right: 1.2rem;
+                z-index: 10001;
+                background: none;
+                border: none;
+                color: #ffffff;
+                font-size: 1.5rem;
+                line-height: 1;
+                cursor: pointer;
+                padding: 0;
+            }
+            .nav-links.open ~ .nav-close { display: block; }
             .nav-links.open > li > a.active { color: var(--accent-green); }
             .blog-hero { padding-top: 110px; }
         }
@@ -196,6 +213,7 @@
                 <li><a href="preguntas-frecuentes.html">FAQs</a></li>
                 <li><a href="index.html#contacto-form">Contacto</a></li>
             </ul>
+            <button class="nav-close" onclick="document.getElementById('navLinks').classList.remove('open')" aria-label="Cerrar menú">✕</button>
         </div>
         <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
     </nav>
