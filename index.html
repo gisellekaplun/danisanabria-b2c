@@ -275,6 +275,7 @@
       pointer-events: none;
       z-index: 0;
     }
+    .hero-accent { color: #b588fd; }
     .hero-video-overlay {
       position: absolute;
       inset: 0;
@@ -1263,8 +1264,8 @@
 
     /* ===== FAQ ACCORDION (Home + Page) ===== */
     .faq-section { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
-    .faq-section .section-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .faq-section .section-subtitle { margin-bottom: 2rem; }
+    .faq-section .section-title { font-size: 1.8rem; margin-bottom: 1.1rem; }
+    .faq-section .section-subtitle { margin-bottom: 2rem; margin-top: 1.1rem; }
     .faq-section .section-title { color: var(--text-main); }
     .faq-list { list-style: none; }
     .faq-item { border-bottom: 1px solid rgba(181, 136, 253, 0.18); }
@@ -1316,6 +1317,12 @@
     #faq-home .faq-list,
     #faq-home .faq-cta { position: relative; z-index: 1; max-width: 800px; margin-left: auto; margin-right: auto; }
     #faq-home .faq-question { text-align: left; }
+    #faq-home .faq-divider {
+      position: relative;
+      z-index: 1;
+      background: var(--accent-pink);
+      box-shadow: 0 0 12px rgba(181, 136, 253, 0.55);
+    }
     @media (max-width: 768px) {
       #faq-home::before {
         background:
@@ -1600,7 +1607,7 @@
       </video>
       <div class="hero-video-overlay" aria-hidden="true"></div>
       <div class="hero-unified-content">
-        <h1>Atraé las mejores oportunidades laborales y tomá el control de tu carrera.</h1>
+        <h1>Atraé las mejores oportunidades laborales y <strong class="hero-accent">tomá el control</strong> de tu carrera.</h1>
         <p>Te acompaño a potenciar tu perfil, definir tu propuesta de valor y posicionarte como una candidata magnética para conectar con empresas alineadas a tu estilo de vida y bienestar.</p>
         <div class="hero-panel-actions" style="margin-top:1.5rem; justify-content:center;">
           <a href="#que-es" class="btn btn-sm" onclick="irPropuesta('b2c'); return false;">Conocé la mentoría</a>
@@ -1978,6 +1985,7 @@
   <!-- ===== FAQ (Home — 2 preguntas) ===== -->
   <section class="faq-section" id="faq-home">
     <h2 class="section-title">Preguntas frecuentes</h2>
+    <div class="services-divider faq-divider" aria-hidden="true"></div>
     <p class="section-subtitle">Resolvemos las consultas más comunes sobre la mentoría y la búsqueda laboral.</p>
     <ul class="faq-list">
       <li class="faq-item">
