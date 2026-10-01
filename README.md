@@ -1,4 +1,4 @@
-# Daniela Sanabria — Mentoría Laboral (Versión 3)
+# Daniela Sanabria — Mentoría Laboral para jóvenes profesionales
 
 Landing page para Daniela Sanabria, mentora laboral individual para jóvenes profesionales.
 
