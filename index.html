@@ -1147,9 +1147,10 @@
       border-radius: 0 0 12px 12px;
     }
     .timeline-item.open .timeline-body {
-      max-height: 200px;
+      max-height: none;
       padding: 0 1.5rem 1.2rem;
       border-bottom: 1px solid var(--glass-border);
+      overflow: visible;
     }
     .timeline-body p {
       color: rgba(255,255,255,0.75);
@@ -1384,7 +1385,8 @@
     }
     @media (max-width: 900px) {
       #que-es { padding-top: 6rem; }
-      .radial-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .radial-wrap { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+      .radial-text { text-align: center; }
       .radial-text h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 1rem; }
       .radial-text .kit-line { font-size: 1.05rem; margin: 0.2rem 0 1.2rem; }
       .sobre-mi-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
@@ -1496,6 +1498,9 @@
         justify-self: center;
         margin-bottom: 0.5rem;
         padding: 34px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
       }
       .radial-sat {
         position: relative;
@@ -1547,6 +1552,20 @@
       .timeline-item { padding-left: 60px; }
       .timeline::before { left: 18px; }
       .timeline-dot { left: 6px; width: 24px; height: 24px; font-size: 0.65rem; }
+      .timeline-item.open .timeline-body {
+        max-height: 500px;
+        padding: 0 1.2rem 1.1rem;
+      }
+      .timeline-body {
+        padding: 0 1.2rem;
+      }
+      .timeline-header {
+        padding: 1rem 1.2rem;
+      }
+      .timeline-header h4 {
+        font-size: 0.98rem;
+        line-height: 1.4;
+      }
     }
     .whatsapp-float {
       position: fixed;
